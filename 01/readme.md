@@ -45,3 +45,25 @@ func main() {
 }
 ```
 
+一時変数を咬ませなくても直接代入しても良いね
+
+```
+package main
+
+func retInput(i int) int {
+	return i
+}
+
+func main() {
+	var target int
+	if true {
+		target = retInput(1)
+	} else {
+		target = retInput(2)
+	}
+	println(target)
+}
+```
+
+２つ目の修正例だと、代入が少なくて見やすいし、retInput() のエラー処理も共通化できるときは特に有効。できたら変数のシャドウイングは避けた方がよさそう。けど、変数 err があるので難しいときもある。
+
