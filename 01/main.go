@@ -7,11 +7,11 @@ func retInput(i int) int {
 func main() {
 	var target int
 	if true {
-		target := retInput(1)
-		target = retInput(target)
+		temp := retInput(1)
+		target = temp
 	} else {
-		target := retInput(2)
-		target = retInput(target)
+		temp := retInput(2)
+		target = temp
 	}
 	println(target)
 }
